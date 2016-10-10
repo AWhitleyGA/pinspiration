@@ -9,3 +9,5 @@
   <li><%= link_to board.topic, user_board_path(@user, board) %></li>
   <% end %>
 </ul>
+
+<%= link_to "Create New Board", new_user_board_path(@user) %>

@@ -1,0 +1,12 @@
+<h2>Edit Board</h2>
+
+<%= form_for [@user, @board] do |f| %>
+  <%= f.label :topic %>
+  <%= f.text_field :topic %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= form_for [@user, @board], method: :delete do |f| %>
+  <%= f.submit "Delete Board", class: "delete" %>
+<% end %>

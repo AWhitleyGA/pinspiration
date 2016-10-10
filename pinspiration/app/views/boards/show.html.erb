@@ -1,0 +1,7 @@
+<h2><%= @board.topic %></h2>
+
+<% @pins.each do |pin| %>
+  <li><%= link_to pin.title, user_board_pin_path(@user, @board) %></li>
+<% end %>
+
+<%= link_to "Edit Board", edit_user_board_path(@user, @board) %>
