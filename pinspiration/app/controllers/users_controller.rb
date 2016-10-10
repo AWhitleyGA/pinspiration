@@ -13,6 +13,19 @@ class UsersController < ApplicationController
     @user = User.create!(strong_params)
     redirect_to user_path(@user)
   end
+  def edit
+    @user = User.find(params[:id])
+  end
+  def update
+    @user = User.find(params[:id])
+    @user.update(strong_params)
+    redirect_to user_path(@user)
+  end
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path
+  end
 
   private
   def strong_params

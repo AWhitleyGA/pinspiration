@@ -2,6 +2,8 @@
 
 <p><%= @user.email %></p>
 
+<%= link_to "Edit User", edit_user_path(@user) %>
+
 <ul>
   <% @boards.each do |board| %>
   <li><%= link_to board.topic, user_board_path(@user, board) %></li>
